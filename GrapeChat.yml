@@ -1,0 +1,12 @@
+app: Grape
+#binpatch: true
+
+ingredients:
+  dist: trusty
+  sources:
+    - deb http://archive.ubuntu.com/ubuntu/ trusty main universe
+  debs:
+    - /<PathToReleaseDir>/releases/grape_2.14.2_amd64.deb
+
+script:
+  - ( cd usr/bin ; ln -s ../../opt/grape/grape grape)

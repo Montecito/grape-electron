@@ -11,9 +11,14 @@ export function isOSX() {
   return os.type() === 'Darwin'
 }
 
+export function isLinux() {
+  return os.type() === 'Linux'
+}
+
 export function osType() {
   if (isWindows()) return 'win'
   if (isOSX()) return 'osx'
+  if (isLinux()) return 'linux'
 }
 
 export function isNotificationSupported() {
